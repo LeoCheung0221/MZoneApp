@@ -1,44 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.percent.PercentFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:fitsSystemWindows="true">
+    android:layout_height="wrap_content">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="@dimen/menu_header_padding">
+    <!-- todo set bg image -->
+    <!--ratio 16：9-->
+    <!--suppress AndroidDomInspection-->
+    <ImageView
+        app:layout_aspectRatio="178%"
+        app:layout_widthPercent="100%" />
 
         <ImageView
             android:id="@+id/ivAvatar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:padding="@dimen/menu_header_padding"
             android:src="@android:drawable/sym_def_app_icon" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/menu_header_padding">
+
+        <TextView
+            android:id="@+id/tvNumber"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:orientation="horizontal">
+            android:layout_weight="1"
+            android:text="111 111 111 11"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
-            <TextView
-                android:id="@+id/tvNumber"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="111 111 111 11"
-                android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
-
-            <!-- todo set image -->
-            <ImageView
-                android:id="@+id/ivLogout"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@android:drawable/sym_def_app_icon" />
-
-        </LinearLayout>
+        <!-- todo set image -->
+        <ImageView
+            android:id="@+id/ivLogout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/sym_def_app_icon" />
 
     </LinearLayout>
 
-</FrameLayout>
+</android.support.percent.PercentFrameLayout>
