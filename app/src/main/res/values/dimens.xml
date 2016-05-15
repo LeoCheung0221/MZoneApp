@@ -1,0 +1,7 @@
+<resources>
+    <dimen name="menu_header_padding">16dp</dimen>
+    <dimen name="fragment_mzone_info_song_order_padding">16dp</dimen>
+    <dimen name="list_songs_queue_playing_now_padding">16dp</dimen>
+    <dimen name="view_song_item_padding">16dp</dimen>
+    <dimen name="view_list_song_queue_header_padding">16dp</dimen>
+</resources>

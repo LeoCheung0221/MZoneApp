@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- todo place images -->
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_mzone_info"
+            android:icon="@android:drawable/ic_menu_camera"
+            android:title="@string/menu_zone_info" />
+        <item
+            android:id="@+id/nav_song_order"
+            android:icon="@android:drawable/ic_menu_camera"
+            android:title="@string/menu_song_order" />
+        <item
+            android:id="@+id/nav_song_chart"
+            android:icon="@android:drawable/ic_menu_camera"
+            android:title="@string/menu_song_chart" />
+        <item
+            android:id="@+id/nav_orders_history"
+            android:icon="@android:drawable/ic_menu_camera"
+            android:title="@string/menu_orders_history" />
+
+        <item
+            android:id="@+id/nav_map"
+            android:icon="@android:drawable/ic_menu_camera"
+            android:title="@string/menu_map" />
+
+        <item
+            android:id="@+id/nav_info"
+            android:icon="@android:drawable/ic_menu_camera"
+            android:title="@string/menu_info" />
+    </group>
+
+    <item android:title="@string/menu_support">
+        <menu>
+            <item
+                android:id="@+id/nav_phone"
+                android:icon="@android:drawable/ic_menu_camera"
+                android:title="@string/menu_phone" />
+            <item
+                android:id="@+id/nav_feedback"
+                android:icon="@android:drawable/ic_menu_camera"
+                android:title="@string/menu_feedback" />
+        </menu>
+    </item>
+
+</menu>

@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">MZone</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <!-- region menu strings -->
+    <string name="menu_zone_info">Zone信息</string>
+    <string name="menu_song_order">音乐清单</string>
+    <string name="menu_song_chart">乐坛流行榜</string>
+    <string name="menu_orders_history">最近播放</string>
+    <string name="menu_map">定位</string>
+    <string name="menu_info">关于</string>
+    <string name="menu_phone">86-151-616-73556</string>
+    <string name="menu_feedback">反馈</string>
+    <string name="menu_support">支持</string>
+    <string name="fragment_mzone_info_song_order">订购</string>
+    <string name="list_songs_queue_playing_now">正在播放</string>
+    <string name="list_songs_queue_empty_header">提示</string>
+    <string name="list_songs_queue_empty_subheader">暂无音乐列表</string>
+    <string name="view_list_song_queue_title">即将播放</string>
+    <!-- endregion -->
+</resources>
