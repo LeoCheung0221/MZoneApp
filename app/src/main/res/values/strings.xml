@@ -14,6 +14,8 @@
     <string name="menu_phone">86-151-616-73556</string>
     <string name="menu_feedback">反馈</string>
     <string name="menu_support">支持</string>
+    <!-- endregion -->
+    <!-- region fragment mzone info -->
     <string name="fragment_mzone_info_song_order">订购</string>
     <string name="list_songs_queue_playing_now">正在播放</string>
     <string name="list_songs_queue_empty_header">提示</string>
