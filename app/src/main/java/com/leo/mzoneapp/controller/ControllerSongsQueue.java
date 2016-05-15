@@ -32,6 +32,7 @@ public class ControllerSongsQueue {
     }
 
     public int getSongsQueueSize() {
+        //todo implement
         return 3;
     }
 }
