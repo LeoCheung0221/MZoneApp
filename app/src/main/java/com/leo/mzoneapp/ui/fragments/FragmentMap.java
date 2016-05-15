@@ -1,7 +1,12 @@
 package com.leo.mzoneapp.ui.fragments;
 
 import android.os.Bundle;
+import android.support.annotation.Nullable;
+import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
@@ -12,6 +17,7 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.leo.mzoneapp.R;
+import com.leo.mzoneapp.ui.activities.ActivityBase;
 
 /**
  * author： LeoCheung4ever on 2016/5/9 16:21
@@ -25,6 +31,12 @@ public class FragmentMap extends FragmentBase
     GoogleMap mMap;
 
     @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setHasOptionsMenu(true);
+    }
+
+    @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_map, container, false);
 
@@ -32,16 +44,27 @@ public class FragmentMap extends FragmentBase
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
 
+        ((ActivityBase) getActivity()).setSupportActionBar((Toolbar) v.findViewById(R.id.toolbar));
         return v;
     }
 
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
+    }
 
-        // Add a marker in Sydney and move the camera
-        LatLng sydney = new LatLng(-34, 151);
-        mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
+    @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        inflater.inflate(R.menu.fragment_map_menu, menu);
+        super.onCreateOptionsMenu(menu, inflater);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == R.id.menu_city_selected) {
+            //todo implement show fullscreen dialog
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 }
