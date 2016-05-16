@@ -1,11 +1,9 @@
 package com.leo.mzoneapp.controller;
 
-import com.leo.mzoneapp.ui.adapters.AdapterSongsQueue;
-
 /**
  * author：leo on 2016/5/15 16:35
  * email： leocheung4ever@gmail.com
- * description: TODO
+ * description: songs queue controller
  * what & why is modified:
  */
 public class ControllerSongsQueue {
@@ -21,18 +19,21 @@ public class ControllerSongsQueue {
         return instance;
     }
 
-    //todo implement
     public boolean isPlayingNow() {
-        return true;
+        return ControllerMzoneInfo.getInstance().getData() != null
+                && ControllerMzoneInfo.getInstance().getData().currentSong != null;
     }
 
-    //todo implement
     public boolean isQueueEmpty() {
-        return getSongsQueueSize() == 0;
+        return getQueueSize() == 0;
     }
 
-    public int getSongsQueueSize() {
-        //todo implement
-        return 3;
+
+    public int getQueueSize() {
+        if (ControllerMzoneInfo.getInstance().getData() == null
+                || ControllerMzoneInfo.getInstance().getData().songsQueue == null
+                || ControllerMzoneInfo.getInstance().getData().songsQueue.size() == 0)
+            return 0;
+        return ControllerMzoneInfo.getInstance().getData().songsQueue.size();
     }
 }

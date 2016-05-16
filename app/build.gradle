@@ -30,6 +30,11 @@ dependencies {
     compile 'com.android.support:recyclerview-v7:23.3.0'
     compile 'com.android.support:design:23.3.0'
     compile 'com.android.support:percent:23.3.0'
+
+    compile 'com.squareup.picasso:picasso:2.5.2'
+
     compile 'com.squareup.retrofit2:retrofit:2.0.2'
+    compile 'com.squareup.retrofit2:converter-gson:2.0.2'
+
     compile 'com.google.android.gms:play-services:8.4.0'
 }

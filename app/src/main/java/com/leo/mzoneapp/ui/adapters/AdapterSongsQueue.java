@@ -38,7 +38,7 @@ public class AdapterSongsQueue extends RecyclerView.Adapter<AdapterSongsQueue.Vi
 
     @Override
     public int getItemCount() {
-        return ControllerSongsQueue.getInstance().getSongsQueueSize();
+        return ControllerSongsQueue.getInstance().getQueueSize();
     }
 
     public void update() {

@@ -62,6 +62,10 @@ public class AdapterMzoneInfo extends RecyclerView.Adapter<AdapterMzoneInfo.View
         return count;
     }
 
+    public void updateData() {
+
+    }
+
     public class ViewHolder extends RecyclerView.ViewHolder {
         public ViewHolder(View itemView) {
             super(itemView);
