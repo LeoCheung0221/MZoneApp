@@ -27,7 +27,7 @@
                     android:id="@+id/ivMzone"
                     android:scaleType="centerCrop"
                     android:src="@android:drawable/ic_menu_share"
-                    app:layout_aspectRatio="133%"
+                    app:layout_aspectRatio="150%"
                     app:layout_widthPercent="100%"
                     tools:ignore="ContentDescription" />
 
